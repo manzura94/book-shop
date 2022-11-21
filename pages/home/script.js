@@ -27,7 +27,7 @@ navitem4.innerText = "Contact us";
 
 const cartcont = create("div", "cart-wrapper", listofnav);
 const cartimg = create("img", "menu-img", cartcont);
-cartimg.src = "./assets/icons/cart.svg";
+cartimg.src = "../../assets/icons/cart.svg";
 
 // //homepage
 
@@ -35,7 +35,7 @@ const homepage = create("section", "homepage", container);
 const homebanner = create("div", "homebanner", homepage);
 
 const homeImage = create("img", "banner-img", homebanner);
-homeImage.src = "./assets/images/bookshop.jpeg";
+homeImage.src = "../../assets/images/bookshop.jpeg";
 
 const homeContext = create("div", "homeContext", homepage);
 const context = create("h2", "context", homeContext);
@@ -61,7 +61,7 @@ const catalogOrderItems = create("div", "catalog-order-items", catalogOrder);
 catalogOrderTitle.innerText = "Order List";
 
 let booksGlobal = [];
-let books = fetch("./data/books.json")
+let books = fetch("../../data/books.json")
   .then((response) => {
     return response.json();
   })
@@ -72,6 +72,7 @@ let books = fetch("./data/books.json")
 
 (async function () {
   let newdata = await books;
+  console.log(newdata);
   newdata.forEach((element) => {
     let item = create("div", "item", catalogItems);
     item.setAttribute("draggable", true);
@@ -131,7 +132,7 @@ addmorePanel.addEventListener("drop", drop);
 
 const showMorePanel = create("div", "showmoreDisplay", catalog);
 const closeBtn = create("img", "closebtn", showMorePanel);
-closeBtn.src = "./assets/icons/close-btn.svg";
+closeBtn.src = "../../assets/icons/close-btn.svg";
 const showText = create("p", "showText", showMorePanel);
 const showAuthor = create("p", "showAuthor", showMorePanel);
 const showPrice = create("p", "showPrice", showMorePanel);
@@ -164,7 +165,7 @@ let orders = [];
 const confirmWrapper = create('div', 'confirm-wrapper',catalogOrderItems)
 const confirmOrder = create('button', 'confirm-order', confirmWrapper)
 const confirmLink = create('a', 'confirm-link', confirmOrder)
-confirmLink.setAttribute('href', './orderpage')
+confirmLink.setAttribute('href', '../orderpage')
 const priceWrapper = create('div', 'price-wrapper', confirmWrapper)
 const totalPrice = create('span', 'total', priceWrapper)
 const total = create('span', 'total-wrapper', priceWrapper)
@@ -186,7 +187,7 @@ function renderOrder() {
     const parent = create("div", "order-container", addmorePanel);
 
     const closeButton = create("img", "close-order", parent);
-    closeButton.src = "./assets/icons/close-btn.svg";
+    closeButton.src = "../../assets/icons/close-btn.svg";
     closeButton.setAttribute("id", id);
     closeButton.setAttribute("onclick", `removeOrder(${id})`);
 
