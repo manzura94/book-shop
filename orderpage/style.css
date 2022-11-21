@@ -1,0 +1,18 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(188, 143, 188);
+
+}
+
+#form{
+    padding: 50px;
+    background-color:#fff;
+    border-radius: 20px;
+}
+
+.form-section{
+    margin: 20px 0;
+}

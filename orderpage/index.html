@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="form" method="get">
+      <div>
+        <div class="form-section">
+          <label for="name">Firstname</label>
+          <input
+            type="text"
+            id="nameIn"
+            name="nameIn"
+            placeholder="Enter your name"
+            required
+          />
+          <span class="error"></span>
+        </div>
+        <div class="form-section">
+          <label for="surname">Surname</label>
+          <input
+            type="text"
+            id="surname"
+            name="surname"
+            placeholder="Enter your lastname"
+            required
+          />
+          <span class="error"></span>
+        </div>
+        <div class="form-section">
+          <label for="date">Delivery date</label>
+          <input
+            type="date"
+            id="date"
+            name="date"
+            placeholder="Enter delivery date"
+            required
+          />
+          <span class="error"></span>
+        </div>
+        <div class="form-section">
+          <label for="street">Street name</label>
+          <input
+            type="text"
+            id="street"
+            name="street"
+            placeholder="Enter your street name"
+            required
+          />
+          <span class="error"></span>
+        </div>
+        <div class="form-section">
+          <label for="number">House number</label>
+          <input
+            type="number"
+            id="number"
+            name="number"
+            placeholder="Enter your house number"
+            required
+          />
+          <span class="error"></span>
+        </div>
+        <div class="form-section">
+          <label for="flat">Flat number</label>
+          <input
+            type="number"
+            id="flat"
+            name="flat"
+            placeholder="Enter your flat number"
+            required
+          />
+          <span class="error"></span>
+        </div>
+        <div class="form-section">
+          <label for="payment">Choose payment type</label>
+          <div>
+            <input type="radio" id="cash" name="payment" value="Cash" />
+            <label for="cash">Cash</label>
+            <input type="radio" id="card" name="payment" value="card" />
+            <label for="card">Card</label>
+          </div>
+        </div>
+        <div class="form-section">
+          <label for="gift">Choose 2 gifts: (optional)</label>
+          <div>
+            <div>
+              <input
+                type="checkbox"
+                id="pack"
+                name="pack"
+                value="pack as a gift"
+              />
+              <label for="pack">pack as a gift</label><br />
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="postcard"
+                name="postcard"
+                value="add postcard"
+              />
+              <label for="postcard">add postcard</label><br />
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="discount"
+                name="discount"
+                value="provide 2% discount to the next time"
+              />
+              <label for="discount">provide 2% discount to the next time</label
+              ><br />
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="pencil"
+                name="pencil"
+                value="branded pen or pencil"
+              />
+              <label for="pencil">branded pen or pencil</label><br />
+            </div>
+          </div>
+        </div>
+        <button>submit</button>
+      </div>
+    </form>
+    <script src="./script.js"></script>
+  </body>
+</html>
