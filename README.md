@@ -1,1 +1,1 @@
-## demo (https://manzura94.github.io/book-shop)
+## demo (https://manzura94.github.io/book-shop/pages/home)
