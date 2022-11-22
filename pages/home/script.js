@@ -170,7 +170,7 @@ totalPrice.innerText = 'total price:'
 confirmOrder.innerText = "Confirm Order"
 
 confirmOrder.addEventListener('click', ()=>{
- location.replace('/pages/orderpage/index.html')
+ location.replace('/pages/orderpage')
 
 })
 
