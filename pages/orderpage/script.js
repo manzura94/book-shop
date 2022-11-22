@@ -161,7 +161,7 @@ cancel.addEventListener("click", () => {
 });
 
 order.addEventListener("click", () => {
- location.replace('/pages/home/index.html')
+ location.replace('/book-shop/pages/home/')
 });
 
 function displayError(input, message) {
