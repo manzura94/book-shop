@@ -289,11 +289,11 @@ button {
 .confirm-order:disabled {
     background:#e4a7e4 ;
     opacity: 0.5;
-    cursor: not-allowed;
+    cursor: not-allowed !important;
 }
 
 .confirm-link:disabled{
-    cursor: not-allowed;
+    cursor: not-allowed !important;
 }
 
 .confirm-wrapper{

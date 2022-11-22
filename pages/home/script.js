@@ -72,7 +72,6 @@ let books = fetch("../../data/books.json")
 
 (async function () {
   let newdata = await books;
-  console.log(newdata);
   newdata.forEach((element) => {
     let item = create("div", "item", catalogItems);
     item.setAttribute("draggable", true);
@@ -164,14 +163,16 @@ let orders = [];
 
 const confirmWrapper = create('div', 'confirm-wrapper',catalogOrderItems)
 const confirmOrder = create('button', 'confirm-order', confirmWrapper)
-const confirmLink = create('a', 'confirm-link', confirmOrder)
-confirmLink.setAttribute('href', '../orderpage')
 const priceWrapper = create('div', 'price-wrapper', confirmWrapper)
 const totalPrice = create('span', 'total', priceWrapper)
 const total = create('span', 'total-wrapper', priceWrapper)
-total.innerText = '20'
 totalPrice.innerText = 'total price:'
-confirmLink.innerText = "Confirm Order"
+confirmOrder.innerText = "Confirm Order"
+
+confirmOrder.addEventListener('click', ()=>{
+ location.replace('/pages/orderpage/index.html')
+
+})
 
 function renderOrder() {
 
@@ -180,7 +181,7 @@ function renderOrder() {
   },0)
 
   btnConfirm.disabled = orders.length == 0
-  btnConfirmLink.disabled = orders.length == 0
+
  
   addmorePanel.innerHTML = "";
   orders.forEach(({ title, price, author, imageLink, id }) => {
@@ -209,7 +210,6 @@ function renderOrder() {
 
 
 function addToCart(buttons, data) {
-  console.log(data);
   for (let i = 0; i < buttons.length; i++) {
     let button = buttons[i];
     button.addEventListener("click", function () {
@@ -253,8 +253,5 @@ function drop(e) {
 
 const btnConfirm = document.querySelector(".confirm-order")
 const btnConfirmLink = document.querySelector(".confirm-link")
-console.log(btnConfirmLink);
-
-btnConfirm.addEventListener('click', ()=> console.log('hi'))
 
 renderOrder()
